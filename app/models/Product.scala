@@ -17,6 +17,7 @@ object Product {
     Product(5012, "Zebra Paperclips", "Zebra length plain pack of 100")
   )
 
+  // find all products
   def findAll() = this.products.toList.sortBy(_.ean)
 }
 
