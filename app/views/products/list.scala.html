@@ -1,4 +1,4 @@
-@(products: List[Product])(implicit lang: Lang)
+@(products: List[Product])(implicit flash: Flash, lang: Lang)
 
 @main(Messages("application.name")) {
     <dl>
@@ -7,4 +7,8 @@
             <dt>@product.description</dt>
         }
     </dl>
+
+    <p>
+        <a href="@controllers.routes.Products.newProduct()">@Messages("products.new.command")</a>
+    </p>
 }
